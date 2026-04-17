@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Nunito:wght@400;600;700;800&display=swap');
+
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+:root {
+  --red: #E8170F;
+  --orange: #FF6B00;
+  --yellow: #FFD600;
+  --dark: #1A0A00;
+  --dark2: #2B1400;
+  --cream: #FFF8EE;
+  --green: #22C55E;
+  --green-dark: #15803D;
+}
+
+body { 
+  font-family: 'Nunito', sans-serif; 
+  background: var(--dark); 
+  color: white; 
+}

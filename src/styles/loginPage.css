@@ -1,0 +1,85 @@
+.login-page {
+  min-height: 100vh;
+  display: grid; grid-template-columns: 1fr 1fr;
+  background: var(--dark);
+}
+
+.login-left {
+  background: linear-gradient(160deg, var(--red), var(--dark2) 80%);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 60px; position: relative; overflow: hidden;
+}
+
+.login-left::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 30% 70%, #FFD60020, transparent 60%);
+}
+
+.login-left-content { position: relative; z-index: 1; text-align: center; }
+.login-logo { font-family: 'Boogaloo', cursive; font-size: 3.5rem; color: white; margin-bottom: 8px; }
+.login-tagline { color: #ffffff88; font-size: 1rem; margin-bottom: 48px; }
+.login-emoji { font-size: 120px; animation: float 4s ease-in-out infinite; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+.login-right {
+  display: flex; align-items: center; justify-content: center;
+  padding: 60px;
+}
+
+.login-form-box {
+  width: 100%; max-width: 380px;
+}
+
+.login-form-box h2 {
+  font-family: 'Boogaloo', cursive;
+  font-size: 2.2rem; color: white; margin-bottom: 8px;
+}
+
+.login-form-box p { color: #ffffff55; font-size: 0.9rem; margin-bottom: 36px; }
+
+.form-group { margin-bottom: 20px; }
+
+.form-group label {
+  display: block; font-size: 0.8rem; font-weight: 700;
+  color: #ffffff88; letter-spacing: 1px; text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%; background: #2B1400;
+  border: 2px solid #ffffff15; border-radius: 12px;
+  padding: 14px 18px; font-size: 0.95rem;
+  font-family: 'Nunito', sans-serif;
+  color: white; outline: none; transition: border-color 0.2s;
+}
+
+.form-group input:focus { border-color: var(--orange); }
+.form-group input::placeholder { color: #ffffff33; }
+
+.btn-login {
+  width: 100%;
+  background: linear-gradient(135deg, var(--red), var(--orange));
+  color: white; border: none; padding: 16px;
+  border-radius: 12px; font-family: 'Nunito', sans-serif;
+  font-weight: 800; font-size: 1rem; cursor: pointer;
+  transition: all 0.25s; box-shadow: 0 8px 24px #E8170F40;
+  margin-top: 8px;
+}
+.btn-login:hover { transform: translateY(-2px); box-shadow: 0 12px 32px #E8170F60; }
+
+.back-link {
+  display: block; text-align: center; margin-top: 20px;
+  color: #ffffff44; font-size: 0.85rem; cursor: pointer;
+}
+.back-link:hover { color: var(--orange); }
+
+/* Responsividad específica del Login */
+@media (max-width: 768px) {
+  .login-page { grid-template-columns: 1fr; }
+  .login-left { display: none; }
+}
