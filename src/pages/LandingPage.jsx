@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; 
-import { supabase } from "../lib/supabaseClient"; 
+import { supabase } from "../lib/supabaseClient";
+import heroBurgerImg from "../assets/logoHambur.png"; 
 import "../styles/landingPage.css"; 
 
 export default function LandingPage() {
@@ -53,7 +54,7 @@ export default function LandingPage() {
       return;
     }
 
-    const numeroTelefono = "51999999999"; // Reemplaza con tu número real
+    const numeroTelefono = "+59164530330"; // Reemplaza con tu número real
     
     const mensaje = `*¡Hola! Quiero hacer un pedido:* 🛵\n\n` +
                     `👤 *A nombre de:* ${orderForm.nombreCliente}\n` +
@@ -96,12 +97,12 @@ export default function LandingPage() {
           </div>
         </div>
         <div className="hero-visual">
-          <div className="food-showcase">
-            🍔
-            <span className="food-orbit">🍟</span>
-            <span className="food-orbit">🌮</span>
-            <span className="food-orbit">🍕</span>
-          </div>
+          {/* --- MODIFICADO: Imagen real en lugar de emojis --- */}
+          <img 
+            src={heroBurgerImg} 
+            alt="Hamburguesa FAST BITES de alta calidad" 
+            className="hero-main-image"
+          />
         </div>
       </section>
       
@@ -147,16 +148,16 @@ export default function LandingPage() {
             <h3>FAST🔥BITES - Local Principal</h3>
             <div className="info-item">
               <span className="info-icon">📍</span>
-              <p>Av. Gral. Eugenio Garzón 799, Jesús María, Lima</p>
+              <p>Radial 17 1/2 6150, Santa Cruz de la Sierra, Bolivia</p>
             </div>
             <div className="info-item">
               <span className="info-icon">🕒</span>
-              <p>Lunes a Domingo<br/>12:00 PM a 11:00 PM</p>
+              <p>Lunes a Sabado<br/>5:00 PM a 11:00 PM</p>
             </div>
             <button 
               className="btn-secondary" 
               style={{marginTop: '24px'}}
-              onClick={() => window.open('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15607.728286950338!2d-77.056079!3d-12.07478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8c9bf726d69%3A0x7d6a5c13e7ec1e9a!2sJes%C3%BAs%20Mar%C3%ADa%2C%20Per%C3%BA!5e0!3m2!1ses!2s!4v1713290000000!5m2!1ses!2s', '_blank')}
+              onClick={() => window.open('https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3798.422854122949!2d-63.23010532482504!3d-17.818801683143914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDQ5JzA3LjciUyA2M8KwMTMnMzkuMSJX!5e0!3m2!1ses!2spe!4v1776471941969!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade')}
             >
               Ver ruta en Google Maps 🗺️
             </button>
@@ -165,7 +166,7 @@ export default function LandingPage() {
           <div className="map-wrapper">
             {/* Iframe de Google Maps */}
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15607.728286950338!2d-77.056079!3d-12.07478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8c9bf726d69%3A0x7d6a5c13e7ec1e9a!2sJes%C3%BAs%20Mar%C3%ADa%2C%20Per%C3%BA!5e0!3m2!1ses!2s!4v1713290000000!5m2!1ses!2s" 
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3798.422854122949!2d-63.23010532482504!3d-17.818801683143914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDQ5JzA3LjciUyA2M8KwMTMnMzkuMSJX!5e0!3m2!1ses!2spe!4v1776471941969!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 

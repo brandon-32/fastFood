@@ -42,7 +42,7 @@ export default function LoginPage() {
     <div className="login-page">
       <div className="login-left">
         <div className="login-left-content">
-          <div className="login-logo">FAST🔥BITES</div>
+          <div className="login-logo">STOP DEL ANTOJO</div>
           <div className="login-tagline">Panel de administración</div>
           <div className="login-emoji">🍔</div>
         </div>

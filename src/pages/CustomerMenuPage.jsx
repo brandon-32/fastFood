@@ -74,7 +74,7 @@ export default function CustomerMenuPage() {
       {/* Navbar simplificado con botón de volver */}
       <nav className="navbar">
         <div className="logo" style={{ cursor: 'pointer' }} onClick={() => navigate('/')}>
-          FAST<span>🔥</span>BITES
+           FAST<span>🔥</span>BITES
         </div>
         <button className="nav-btn" onClick={() => navigate('/')}>
           ← Volver al inicio
