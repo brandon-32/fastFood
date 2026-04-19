@@ -50,7 +50,7 @@ export default function CustomerMenuPage() {
       return;
     }
 
-    const numeroTelefono = "51999999999"; // Cambiar por tu número real
+    const numeroTelefono = "+59164530330"; // Cambiar por tu número real
     
     const mensaje = `*¡Hola! Quiero hacer un pedido:* 🛵\n\n` +
                     `👤 *A nombre de:* ${orderForm.nombreCliente}\n` +
