@@ -88,7 +88,7 @@ export default function LandingPage() {
         <div className="hero-text">
           <div className="badge">🔥 Nuevo menú disponible</div>
           <h1>El sabor que <span className="accent">no puedes</span> olvidar</h1>
-          <p>Ingredientes frescos, recetas auténticas y la mejor experiencia de comida rápida en Lima. ¡Pide ahora y recibe en 30 minutos!</p>
+          <p>Ingredientes frescos, recetas auténticas y la mejor experiencia de comida rápida en Santa Cruz. ¡Pide ahora y recibe en 30 minutos!</p>
           <div className="hero-btns">
             <button className="btn-primary" onClick={() => navigate('/menu-completo')}>
               Ver Menú Completo →
